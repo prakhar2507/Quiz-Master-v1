@@ -5,101 +5,30 @@ QuizMaster is a web-based application built with Flask that allows users to regi
 
 ## Features
 
-**Category**
+| **Category**          | **Feature**                     | **Description**                                                                 |
+|-----------------------|---------------------------------|---------------------------------------------------------------------------------|
+| **User Features**     | Registration and Authentication | Users can register with email, password, full name, qualification, and DOB. Secure login/logout functionality. |
+|                       | Dashboard                      | Displays user information, available quizzes, and past scores.                   |
+|                       | Quiz Attempt                   | Users can attempt active quizzes, submit answers, and view results with score percentage. |
+|                       | Available Quizzes              | Lists all quizzes available for users to attempt.                               |
+|                       | Score History                  | View quiz attempt history with quiz names, scores, and attempt dates.           |
+|                       | Quiz Result                    | Detailed results of quiz attempts, showing correct and incorrect answers.        |
+| **Admin Features**    | Admin Dashboard                | Overview of total users, active users, active quizzes, and recent quiz attempts. |
+|                       | User Management                | Add, edit, and delete users; update details like email, password, and qualification. |
+|                       | Subject Management             | Create, edit, and delete subjects.                                              |
+|                       | Chapter Management             | Add, edit, and delete chapters within subjects; assign chapter numbers.         |
+|                       | Question Management            | Add, edit, and delete questions for specific chapters with four options and a correct answer. |
+|                       | Quiz Management                | Create, edit, delete quizzes; set properties like name, description, start/end time, duration, and max marks. |
+|                       | Quiz Question Assignment       | Add questions to quizzes from the same chapter.                                 |
+|                       | Quiz Status Toggle             | Toggle quiz status between active and inactive.                                 |
+|                       | Quiz Preview                   | Preview quizzes to review associated questions.                                 |
+|                       | Data Integrity                 | Deleting subjects, chapters, quizzes, or questions removes related data (scores, attempts, answers). |
+| **Technical Features** | Role-Based Access Control      | Decorators (`admin_required`, `user_required`) restrict access based on roles.  |
+|                       | Database                       | SQLite with SQLAlchemy ORM for models (users, admins, quizzes, questions, scores). |
+|                       | Session Management             | Flask-Login for user sessions, with user type stored for role differentiation.  |
+|                       | Error Handling                 | Robust error handling with flash messages for user feedback.                    |
+|                       | Modular Structure              | Blueprints organize routes (`auth`, `user`, `admin`, `routes`) for clean code.  |
 
-**Feature**
-
-**Description**
-
-**User Features**
-
-Registration and Authentication
-
-Users can register with email, password, full name, qualification, and DOB. Secure login/logout functionality.
-
-Dashboard
-
-Displays user information, available quizzes, and past scores.
-
-Quiz Attempt
-
-Users can attempt active quizzes, submit answers, and view results with score percentage.
-
-Available Quizzes
-
-Lists all quizzes available for users to attempt.
-
-Score History
-
-View quiz attempt history with quiz names, scores, and attempt dates.
-
-Quiz Result
-
-Detailed results of quiz attempts, showing correct and incorrect answers.
-
-**Admin Features**
-
-Admin Dashboard
-
-Overview of total users, active users, active quizzes, and recent quiz attempts.
-
-User Management
-
-Add, edit, and delete users; update details like email, password, and qualification.
-
-Subject Management
-
-Create, edit, and delete subjects.
-
-Chapter Management
-
-Add, edit, and delete chapters within subjects; assign chapter numbers.
-
-Question Management
-
-Add, edit, and delete questions for specific chapters with four options and a correct answer.
-
-Quiz Management
-
-Create, edit, delete quizzes; set properties like name, description, start/end time, duration, and max marks.
-
-Quiz Question Assignment
-
-Add questions to quizzes from the same chapter.
-
-Quiz Status Toggle
-
-Toggle quiz status between active and inactive.
-
-Quiz Preview
-
-Preview quizzes to review associated questions.
-
-Data Integrity
-
-Deleting subjects, chapters, quizzes, or questions removes related data (scores, attempts, answers).
-
-**Technical Features**
-
-Role-Based Access Control
-
-Decorators (`admin_required`, `user_required`) restrict access based on roles.
-
-Database
-
-SQLite with SQLAlchemy ORM for models (users, admins, quizzes, questions, scores).
-
-Session Management
-
-Flask-Login for user sessions, with user type stored for role differentiation.
-
-Error Handling
-
-Robust error handling with flash messages for user feedback.
-
-Modular Structure
-
-Blueprints organize routes (`auth`, `user`, `admin`, `routes`) for clean code.
 
 ## Project Structure
 
